@@ -1,0 +1,24 @@
+﻿{
+ "manifest_version": 2,
+  "name": "WebHaHa",
+  "version": "2.0.0",
+  "description": "替换网页中指定的文本",
+  "permissions": [
+    "webRequest",
+	"http://*/",
+	"https://*/"
+  ],
+  "icons": {
+    "48" : "sample-48.png",
+    "128" : "sample-128.png"
+  },
+   "background": {
+	"scripts": ["background.js"]
+  },
+  "content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*"],
+      "js" : ["contentscript.js"]
+    }
+  ]
+}
